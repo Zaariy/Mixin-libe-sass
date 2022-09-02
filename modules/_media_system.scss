@@ -1,0 +1,80 @@
+/// """
+/// The Media system it is allowed you to select your media type
+///  and customize it
+/// 
+/// """
+/// 
+/// Params 
+/// $Size : you chould type which size you want 
+/// 
+/// Sizes :
+/// sm :  Small devices (landscape phones, 576px and up)
+/// md :  Medium devices (tablets, 768px and up)
+/// lg :  Large devices (desktops, 992px and up)
+/// lg-x : Extra large devices (large desktops, 1200px and up)
+/// lg-xx : Extra extra large devices (extra large desktops, 1400px and up)
+/// 
+/// Examples :
+/// .your_class {
+///     mediaSys(md) {
+///         font-size : 4em 
+///         ...
+///         ...
+///     }
+/// }
+///  
+/// 
+
+
+@mixin mediaSys ($size) {
+    @if $size =='sm' {
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            @content ;
+        }
+
+    }
+
+    @else if $size =='md' {
+
+        /* Medium devices (tablets, 768px and up)  */
+        @media (min-width: 768px) {
+
+            @content ;
+        }
+
+    }
+
+    @else if $size =='lg' {
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+
+            @content ;
+        }
+
+    }
+
+    @else if $size =='lg-x' {
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+
+            @content ;
+        }
+
+    }
+
+    @else if $size =='lg-xx' {
+
+        /* Extra extra large devices (extra large desktops, 1400px and up) */
+        @media (min-width: 1400px) {
+
+            @content ;
+        }
+
+    }
+
+
+}

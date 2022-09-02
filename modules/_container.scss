@@ -1,0 +1,34 @@
+@use "./media_system" as *;
+
+/// 
+/// container
+/// it is allow you center you content 
+/// and add some margine in corner
+/// 
+
+.container {
+
+    padding: 0 10px;
+
+    @include mediaSys('sm') {
+        margin: 0 15px;
+    }
+
+    @include mediaSys('md') {
+        margin: 0 25px;
+    }
+
+    @include mediaSys('lg') {
+        margin: 0 35px;
+    }
+
+    @include mediaSys('lg-x') {
+        margin: 0 50px;
+    }
+
+    @include mediaSys('lg-xx') {
+        margin: 0 60px;
+    }
+
+
+}
